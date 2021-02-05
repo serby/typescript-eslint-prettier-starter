@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest src",
     "lint": "yarn run lint:json && yarn run lint:ts",
     "lint:json": "prettier --list-different .eslintrc *.json",
     "lint:ts": "eslint --ext .ts --ignore-path .gitignore .",
-    "build": "tsc"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
