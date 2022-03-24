@@ -1,20 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "outDir": "./dist/",
+    "target": "ES2019",
+    "outDir": "build/dist/",
     "sourceMap": true,
     "lib": ["esnext"],
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "CommonJS",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ]
   },
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["node_modules", "build/dist"],
   "include": ["src"]
 }
