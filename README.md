@@ -12,8 +12,9 @@ A starter project to enable:
 
 ```
 export PROJECT_NAME=MyNewProject
-git clone --bare https://github.com/serby/typescript-eslint-prettier-starter.git $PROJECT_NAME
+git clone https://github.com/serby/typescript-eslint-prettier-starter.git $PROJECT_NAME
 cd $PROJECT_NAME
+rm -rf .git
 yarn install
 ```
 
