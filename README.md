@@ -8,7 +8,21 @@ A starter project to enable:
 
 ## Usage
 
+### To start your own project
+
 ```
+export PROJECT_NAME=MyNewProject
+git clone --bare https://github.com/serby/typescript-eslint-prettier-starter.git $PROJECT_NAME
+cd $PROJECT_NAME
+yarn install
+```
+
+### To contribute to this starter
+
+```
+git clone git@github.com:serby/typescript-eslint-prettier-starter.git
+#git clone git@github.com:{your_fork}/typescript-eslint-prettier-starter.git
+cd typescript-eslint-prettier-starter
 yarn install
 ```
 
