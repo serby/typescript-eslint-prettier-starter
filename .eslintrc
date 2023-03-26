@@ -7,7 +7,20 @@
     "no-console": ["off"],
     "@typescript-eslint/no-useless-constructor": ["error"],
     "@typescript-eslint/no-unused-vars": ["error"],
-    "@typescript-eslint/no-empty-function": ["error"]
+    "@typescript-eslint/no-empty-function": ["error"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "parameter", "format": ["strictCamelCase"] },
+      { "selector": "typeLike", "format": ["StrictPascalCase"] }
+    ],
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ]
   },
   "parserOptions": {
     "ecmaVersion": 6,
