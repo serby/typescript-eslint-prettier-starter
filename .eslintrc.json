@@ -1,0 +1,63 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "import", "unused-imports"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-console": ["off"],
+    "@typescript-eslint/no-useless-constructor": ["error"],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-empty-function": ["error"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "parameter", "format": ["camelCase"], "leadingUnderscore": "allow" },
+      { "selector": "typeLike", "format": ["PascalCase"] }
+    ],
+    "unused-imports/no-unused-imports": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "builtin", "internal", ["parent", "sibling"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/no-duplicates": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts"]
+      },
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  }
+}

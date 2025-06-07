@@ -1,0 +1,20 @@
+# Build outputs
+build/
+dist/
+
+# Cache directories
+cache/
+.cache/
+
+# Test coverage
+coverage/
+
+# Data files
+data/
+
+# Dependencies
+node_modules/
+
+# Other common ignores
+.git/
+.DS_Store
